@@ -1,0 +1,23 @@
+{{ if .IsNamedParams }}
+    <blockquote class="quote">
+        <p>{{ .Get "text" }}</p>
+        {{ if .Get "link"}}
+          <a href="{{ .Get "link" }}">
+            {{if .Get "author"}}
+              <cite>- {{ .Get "author" }}</cite>
+            {{end}}
+          </a>
+        {{else}}
+          {{if .Get "author"}}
+            <cite>- {{ .Get "author" }}</cite>
+          {{end}}
+        {{end}}
+    </blockquote>
+{{ else }}
+<blockquote class="quote">
+        <p>{{ .Get 0 }}</p>
+        {{ if .Get 1}}
+          <cite>- {{ .Get 1 }}</cite>
+        {{end}}
+    </blockquote>
+{{end}}

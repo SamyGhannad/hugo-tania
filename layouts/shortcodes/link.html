@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+    <a href="{{ .Get "goto" }}">{{ .Get "title" }}</a>
+{{ else }}
+<a href="{{ .Get 0 }}">{{ .Get 1 }}</a>
+{{end}}

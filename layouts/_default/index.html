@@ -34,13 +34,13 @@
 <div class="container">
     <section>
         <h2>
-            Latest Articles
+            Lately I wrote about
             {{ range $archivesPage }}
             <a class="section-button" href="{{ .RelPermalink }}">View all</a>
             {{ end }}
         </h2>
         <div class="posts">
-            {{ range $pages.Pages }}
+            {{ range $pages.Pages |first 15 }}
             <div class="post">
                 <a href="{{ .RelPermalink }}">
                     <div class="post-row">

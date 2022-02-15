@@ -1,0 +1,11 @@
+{{ if .IsNamedParams }}
+<a href="{{ .Get "src" }}" data-lightbox="{{.Get "set_name"}}" data-title="{{.Get "caption"}}" class="lightbox-mod">
+    <img src="{{.Get "src" }}" alt="{{.Get "caption"}}" class="img-fluid">
+</a>
+
+{{ else }}
+<a href="{{.Get 0}}" data-lightbox="{{.Get 1}}" data-title="{{.Get 2}}" class="lightbox-mod">
+    <img src="{{.Get 0}}" alt="{{.Get 2}}" class="img-fluid">
+</a>
+
+{{end}}
