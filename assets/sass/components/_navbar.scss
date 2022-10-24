@@ -27,6 +27,7 @@ main {
 
     .flex {
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     a {
@@ -94,6 +95,7 @@ main {
 
         .flex {
             justify-content: space-between;
+            flex-wrap: nowrap;
         }
 
         a {
